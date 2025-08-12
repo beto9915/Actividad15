@@ -1,8 +1,3 @@
-import os
-
-def limpiar():
-    os.system("cls")
-
 def pausar():
     input("\nPresione Enter para continuar...")
 
@@ -10,7 +5,6 @@ estudiantes = {}
 opcion = 0
 
 while opcion != 4:
-    limpiar()
     print("="*45)
     print("  SISTEMA DE REGISTRO DE ESTUDIANTES")
     print("="*45)
@@ -28,7 +22,6 @@ while opcion != 4:
         continue
 
     if opcion == 1:
-        limpiar()
         carnet = input("Ingrese el número de carnet: ").strip()
         nombre = input("Ingrese el nombre del estudiante: ").strip()
         edad = int(input("Ingrese la edad: "))
@@ -60,7 +53,6 @@ while opcion != 4:
         pausar()
 
     elif opcion == 2:
-        limpiar()
         if not estudiantes:
             print("No hay estudiantes registrados.")
         else:
@@ -80,7 +72,6 @@ while opcion != 4:
         pausar()
 
     elif opcion == 3:
-        limpiar()
         buscado = input("Ingrese carnet a buscar: ").strip()
         if buscado in estudiantes:
             datos = estudiantes[buscado]
